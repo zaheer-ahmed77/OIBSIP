@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>Temperature Converter</h1>
+<p class="subtitle">Instantly Convert Any Temperature Scale (°C, °F, K)!</p>
+        
+<div class="input-group">
+<label for="temperature">Input Your Temperature Here:</label>
+<input type="number" id="temperature" placeholder="Enter temperature value...">
+            
+<div class="error-message" id="error-message">Please enter a valid number and try again </div>
+</div>
+        
+<div class="input-group">
+<label>Select Input Unit:</label>
+<div class="unit-group">
+<div class="unit-option" id="celsius" onclick="selectUnit('celsius')">
+Celsius (°C)
+</div>
+                
+<div class="unit-option" id="fahrenheit" onclick="selectUnit('fahrenheit')">
+Fahrenheit (°F)
+</div>
+                
+<div class="unit-option" id="kelvin" onclick="selectUnit('kelvin')">
+Kelvin (K)
+
+</div>
+</div>
+</div>
+        
+<button onclick="convertTemperature()">
+Convert Temperature
+</button>
+        
+<div class="result" id="result">
+<div>Converted Temperature is:</div>
+<div class="result-value" id="result-value">0 °C</div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
